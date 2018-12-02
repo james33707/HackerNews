@@ -1,0 +1,7 @@
+<nav class="navbar navbar-light justify-content-between" style="background-color: #c6d0ec;">
+  <a class="navbar-brand">Hacker News</a>
+  <div class="form-inline" >
+    <input [(ngModel)]="searchText" (input)="onKeyUp()" class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+    <button type="button" class="btn btn-outline-primary my-2 my-sm-0" (click)="onSearch($event)" >Search</button>
+  </div>
+</nav>

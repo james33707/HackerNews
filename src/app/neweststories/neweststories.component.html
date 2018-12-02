@@ -1,0 +1,18 @@
+<mat-spinner [diameter]="60" *ngIf="isLoaded"></mat-spinner>
+
+<ul class="list-group">
+  <li
+    *ngFor="let story of newStories | filter : searchText;
+            let index =index;
+            let isOdd=odd;
+            let isEven=even" 
+            
+            [class.odd]="isOdd" 
+            [class.even]="isEven"
+
+            class="list-group-item">
+            
+            <p><Strong>Title: </Strong> <a href={{story.url}}>{{story.title}}</a></p>
+            <p><Strong>Author: </Strong>{{story.by}}</p>
+  </li>
+</ul>
